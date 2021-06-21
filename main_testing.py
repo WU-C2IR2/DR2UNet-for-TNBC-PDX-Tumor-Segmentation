@@ -53,7 +53,7 @@ def gen_precision_recall():
     
     model = r2udensenet()
     weight_directory = 'weights_new'
-    model.load_weights(os.path.join(weight_directory,'model_r2udensenet1.hdf5'))
+    model.load_weights(os.path.join(weight_directory,'model_r2udensenet.hdf5'))
     y_pred = model.predict(images_train_final, batch_size = 1, verbose =1)  
     y_pred = np.squeeze(y_pred, axis = 3)
     
@@ -106,7 +106,7 @@ def predict(opt_thresh = 0.5):
     
     model = r2udensenet()
     weight_directory = 'weights_new'
-    model.load_weights(os.path.join(weight_directory,'model_r2udensenet1.hdf5'))
+    model.load_weights(os.path.join(weight_directory,'model_r2udensenet.hdf5'))
     masks_test = model.predict(images_test, batch_size=1, verbose =1)    
     masks_test = np.squeeze(masks_test, axis = 3)
     print(masks_test.shape)
