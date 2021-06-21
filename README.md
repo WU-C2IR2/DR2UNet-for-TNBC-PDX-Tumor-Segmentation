@@ -4,8 +4,11 @@ This repository provides an automated pipeline for automatic localization and se
 ## Steps to test the Deep Learning Pipeline for Segmentation
 1. Git Clone the repository
 2. Install `python 3.7.10` and the necessary packages by running `pip install -r requirements.txt`
-3. Download the trained weights from https://wustl.box.com/s/hntgs87p91fscx624vpajru6xa789p6m.
-4. Run `main_testing.py`. Have to manually load which model you want to learn. By default the DR2UNet is loaded and running the `main_testing.py` gives the performance score for the selected network on the test dataset.
+3. Download the trained weights from https://wustl.box.com/s/hntgs87p91fscx624vpajru6xa789p6m into a `weights_new` folder inside the folder where you have cloned the other codes from the repository.
+4. Download `images_test.npy` , `images_train.npy`, `images_train_T1.npy` and `mask_train.npy`.
+5. Run `main_testing.py`. Have to manually load which model you want to learn. By default the DR2UNet is loaded and running the `main_testing.py` gives the performance score for the selected network on the test dataset. It automatically calculates the optimum threshold based on the precision recall curves for the network.
+6. You can view the output probability maps in `output` folder under each model folder name (which you have to change each time you run a model).
+ 
 
 
 ## References
