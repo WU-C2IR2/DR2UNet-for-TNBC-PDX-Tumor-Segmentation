@@ -13,8 +13,7 @@ This repository provides an automated pipeline for automatic localization and se
 1. Git Clone the repository.
 2. Install `python 3.7.10` and the necessary packages by running `pip install -r requirements.txt`
 3. For five fold cross validation run `main2D.py` after selecting the network model you want to train the data on. The training considers data augmentation due to the limited dataspace available to us. The `main2D.py ` outputs the mean performance of the network model for 5 folds.
-4. For standalone training and validation run `main_training.py`. This runs a training for all the training data and by using a validation split of 20 %. 
-
+4. For standalone training on the whole dataset after the cross-validation run `main_training.py` to generate the training-weights.
 
 
 ## References
