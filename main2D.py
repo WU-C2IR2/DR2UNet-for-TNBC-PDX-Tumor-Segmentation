@@ -135,41 +135,9 @@ def train():
     print('Recall==', recall, 'Mean Recall ==', np.mean(recall))
     print('AUC==', auc, 'Mean AUC==', np.mean(auc))
     print('Accuracy==', accuracy, 'Mean Accuracy ==',np.mean(accuracy))
-    
-
-################################### PREDICTION OF THE NETWORK ##################################     
-
-def predict():
-    print('============= Beginning of Prediction ================')
-    images_test = load_test_data()
-    images_test = images_test.astype('float32')
-    
-    images_test_mean = np.mean(images_test)
-    images_test_std = np.std(images_test)
-    images_test = (images_test - images_test_mean)/images_test_std
-    
-    model = resunet()
-    weight_directory = 'weights'
-    model.load_weights(os.path.join(weight_directory,'model_3.hdf5'))
-    masks_test = model.predict(images_test, batch_size=1, verbose =1)    
-    masks_test = np.squeeze(masks_test, axis = 3)
-    masks_test = np.around(masks_test, decimals = 0)
-    masks_test = (masks_test*255.).astype(np.uint8)
-    
-    pred_directory = './data/test_image_T2/prediction/r2udensenet/'
-    if not os.path.exists(pred_directory):
-        os.mkdir(pred_directory)
-    
-    count = 0
-    for i in range(0, masks_test.shape[0]):
-        imsave(os.path.join(pred_directory,  str(count) + '_pred' + '.png' ), masks_test[i])
-        count = count + 1
-    
-    print('===========Prediction Done ==============')
-    
-        
+           
 if __name__ == '__main__':
     train()
-    #predict()
+    
 
 
