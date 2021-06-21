@@ -12,6 +12,7 @@ from tensorflow.keras.optimizers import Adam
 from tensorflow.keras.callbacks import ModelCheckpoint, LearningRateScheduler
 from tensorflow.keras import backend as K
 import numpy as np
+from matplotlb import pyplot as plt
 from tensorflow.keras.metrics import Precision, Recall, AUC, Accuracy
 
 
