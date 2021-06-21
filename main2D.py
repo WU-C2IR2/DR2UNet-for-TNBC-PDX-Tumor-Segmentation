@@ -6,17 +6,11 @@ Created on Tue Jun  2 21:24:29 2020
 """
 
 
-#from model import unet
-from model2D import denseunet
-#from model_bcdu_net import BCDU_net_D3
-#from model_multi_resnet import MultiResUnet
-#from res_unet import resunet
-#from r2unet import r2unet
-#from newresunet import ResUNet
+from dense_unet import denseunet
+from res_unet import resunet
 from new_r2udensenet import r2udensenet
-#from new_r2unet import r2unet
-#from unet import unet_model
-#from r2udensenet import r2udensenet
+from new_r2unet import r2unet
+from unet import unet_model
 from data2D import load_train_data, load_test_data
 import os
 from tensorflow.keras.callbacks import ModelCheckpoint, CSVLogger
