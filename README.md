@@ -1,6 +1,11 @@
 # Deep Learning Based Segmentation of Multicontrast TNBC PDX MR Images
 This repository provides an automated pipeline for automatic localization and segmentation of multicontrast MR images in small animals. In this project we have tried using UNet <sup>1</sup>, Residual UNet <sup>2</sup>, Dense UNet <sup>3</sup>, Recurrent Residual UNet (R2UNet) <sup>4</sup> and Dense Recurrent Residual UNet (DR2UNet) <sup>5</sup>.
 
+## Steps to test the Deep Learning Pipeline for Segmentation
+1. Git Clone the repository
+2. Install `python 3.7.10` and the necessary packages by running `pip install -r requirements.txt`
+3. Download the trained weights from 
+4. Run `main_testing.py`. Have to manually load which model you want to learn. By default the DR2UNet is loaded and running the `main_testing.py` gives the performance score for the selected network on the test dataset.
 
 
 ## References
