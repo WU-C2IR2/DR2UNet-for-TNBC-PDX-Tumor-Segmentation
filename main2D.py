@@ -23,8 +23,8 @@ from tensorflow.keras.preprocessing.image import ImageDataGenerator
 from time import time
 from sklearn.model_selection import KFold
 
-#os.environ["CUDA_DEVICE_ORDER"]="PCI_BUS_ID"
-#os.environ["CUDA_VISIBLE_DEVICES"] = "0"
+os.environ["CUDA_DEVICE_ORDER"]="PCI_BUS_ID"
+os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 
 dice = []
 precision = []
