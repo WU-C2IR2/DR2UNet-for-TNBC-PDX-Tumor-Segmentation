@@ -10,7 +10,7 @@ This repository provides an automated pipeline for automatic localization and se
 5. Run `main_testing.py`. Have to manually load which model you want to learn. By default the DR2UNet is loaded and running the `main_testing.py` gives the performance score for the selected network on the test dataset. It automatically calculates the optimum threshold based on the precision recall curves for the network. The `main_testing.py` automatically calls the model architecture and the `data2D.py` to load the data.
 6. You can view the output probability maps in `output` folder under each model folder name (which you have to change each time you run a model).
 
-##Different Network Model and their architecture files:
+## Different Network Model and their architecture files:
 | Network Model | Architecture File | Weight File |
 | --- | --- | --- |
 | DR2UNet | new_r2udensenet.py | model_r2udensenet.hdf5 |
