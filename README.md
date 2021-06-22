@@ -13,8 +13,11 @@ This repository provides an automated pipeline for automatic localization and se
 ##Different Network Model and their architecture files:
 | Network Model | Architecture File | Weight File |
 | --- | --- | --- |
-| DR2UNet | r2udensenet.py | 
-| `git diff` | Show file differences that **haven't been** staged |
+| DR2UNet | new_r2udensenet.py | model_r2udensenet.hdf5 |
+| R2UNet | new_r2unet.py | model_r2unet.hdf5 |
+| Dense-UNet | dense_unet.py | model_denseunet.hdf5 |
+| Res-UNet | res_unet.py | model_resunet.hdf5 |
+| UNet | unet.py | model_unet.hdf5 |
 
 ## Steps for Training and Five Fold Cross Validation
 1. Git Clone the repository.
